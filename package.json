@@ -1,0 +1,34 @@
+{
+  "name": "js-psql-backend-shell",
+  "version": "1.0.0",
+  "description": "JS backend using PSQL &amp; express",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest",
+    "query": "psql -f query.sql > query-result.txt",
+    "start": "node listen.js",
+    "seed": "node ./db/seeds/run-seed.js",
+    "setup-dbs": "psql -f ./db/setup.sql"
+  },
+  "author": "ACW",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.5",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "pg": "^8.12.0",
+    "pg-format": "^1.0.4"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-extended": "^4.0.2",
+    "supertest": "^7.0.0"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "jest-extended/all",
+      "./testSetup.js"
+    ]
+  }
+}
