@@ -1,4 +1,5 @@
-# js-psql-backend-shell
+# js-psql-backend-skeleton
+
 JS backend using PSQL &amp; express
 
 
